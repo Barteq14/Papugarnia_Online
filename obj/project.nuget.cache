@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RCnme2rZHnRFJrdsWLqjQ8qwh/j8dMHp0bcDXm+voF8N5dEmBBeJq+pvLjpt3E4fwLhV4FMRzfVRkawqOQSxpw==",
+  "dgSpecHash": "5gsbP9vYKf2GnrJsd3b/EVTJbtYW4kGy0SWHQKdZ7LtXWutryHWGbDEdWCS6feaXjjpnemXsYNt4VIgQgmLGqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\PapugarniaOnline\\PapugarniaOnline.csproj",
+  "projectFilePath": "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\Papugarnia_Online\\PapugarniaOnline.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barteq\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.5\\microsoft.aspnetcore.cryptography.internal.3.1.5.nupkg.sha512",
     "C:\\Users\\barteq\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.5\\microsoft.aspnetcore.cryptography.keyderivation.3.1.5.nupkg.sha512",

@@ -12,6 +12,7 @@ using PapugarniaOnline.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PapugarniaOnline.DAL;
 
 namespace PapugarniaOnline
 {
@@ -32,6 +33,10 @@ namespace PapugarniaOnline
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddDbContext<PapugarniaOnlineContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("PapugarniaOnlineDB")));
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

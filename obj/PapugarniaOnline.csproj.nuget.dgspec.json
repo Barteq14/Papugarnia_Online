@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\PapugarniaOnline\\PapugarniaOnline.csproj": {}
+    "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\Papugarnia_Online\\PapugarniaOnline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\PapugarniaOnline\\PapugarniaOnline.csproj": {
+    "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\Papugarnia_Online\\PapugarniaOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\PapugarniaOnline\\PapugarniaOnline.csproj",
+        "projectUniqueName": "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\Papugarnia_Online\\PapugarniaOnline.csproj",
         "projectName": "PapugarniaOnline",
-        "projectPath": "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\PapugarniaOnline\\PapugarniaOnline.csproj",
+        "projectPath": "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\Papugarnia_Online\\PapugarniaOnline.csproj",
         "packagesPath": "C:\\Users\\barteq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\PapugarniaOnline\\obj\\",
+        "outputPath": "C:\\Users\\barteq\\Desktop\\magisterka\\inne zadania\\Wieksze Projekty\\Projekt - Papugarnia_Online\\Papugarnia_Online\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
