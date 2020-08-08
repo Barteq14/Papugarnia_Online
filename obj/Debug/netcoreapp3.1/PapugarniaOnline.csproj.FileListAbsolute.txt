@@ -60,9 +60,6 @@ C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papug
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.csprojAssemblyReference.cache
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.AssemblyInfoInputs.cache
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.AssemblyInfo.cs
-C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.csproj.CoreCompileInputs.cache
-C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.RazorAssemblyInfo.cache
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.RazorAssemblyInfo.cs
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.TagHelpers.input.cache
@@ -86,3 +83,6 @@ C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papug
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.dll
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.pdb
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.genruntimeconfig.cache
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.csproj.CoreCompileInputs.cache
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cache

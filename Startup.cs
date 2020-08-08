@@ -31,11 +31,13 @@ namespace PapugarniaOnline
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddDbContext<PapugarniaOnlineContext>(options =>
-                   options.UseSqlServer(Configuration.GetConnectionString("PapugarniaOnlineDB")));
+                   options.UseSqlServer(
+                       Configuration.GetConnectionString("PapugarniaConnection")));
 
             services.AddControllersWithViews();
             services.AddRazorPages();

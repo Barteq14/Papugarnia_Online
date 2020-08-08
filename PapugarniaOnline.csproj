@@ -6,9 +6,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200807142656_mi.cs" />
+    <Compile Remove="Migrations\20200807142656_mi.Designer.cs" />
+    <Compile Remove="Migrations\20200807143052_mig.cs" />
+    <Compile Remove="Migrations\20200807143052_mig.Designer.cs" />
+    <Compile Remove="Migrations\20200808095522_mig.cs" />
+    <Compile Remove="Migrations\20200808095522_mig.Designer.cs" />
+    <Compile Remove="Migrations\20200808112828_poc.cs" />
+    <Compile Remove="Migrations\20200808112828_poc.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\k4pvajuf.jox~" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5" />
   </ItemGroup>
