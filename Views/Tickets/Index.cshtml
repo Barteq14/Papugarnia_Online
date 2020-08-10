@@ -1,17 +1,18 @@
 ﻿@model IEnumerable<PapugarniaOnline.Models.Ticket>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Tickets";
 }
+<hr />
+<center><h1>Tickets</h1></center>
 
-<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
-        <tr>
+        <tr style="background-color:antiquewhite">
             <th>
                 @Html.DisplayNameFor(model => model.TicketName)
             </th>
@@ -22,16 +23,30 @@
                 @Html.DisplayNameFor(model => model.KindOfTicket)
             </th>
             <th></th>
+            <th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.TicketName)
+                <b>  @Html.DisplayFor(modelItem => item.TicketName) </b><br />
+                @if (item.TicketName == "Half price")
+                {
+                    @Html.Label("children, students (up to 26 years of age), retirees, pensioners")
+                }
+                else if (item.TicketName == "Family")
+                {
+                    @Html.Label("2 adult + 1 child; next child + 9 zł(to 3 more children)")
+                }
+                else if (item.TicketName == "Group")
+                {
+                    @Html.Label("group from 15 persons")
+                }
+
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
+                @Html.DisplayFor(modelItem => item.Price) @Html.Label("zł")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.KindOfTicket.Name)
@@ -41,7 +56,13 @@
                 <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
             </td>
+            <td>
+            <form asp-action="Create">
+                <input type="submit" class="btn btn-primary" asp-action="BuyTicket" asp-controller="TicketsController" asp-route-id="@item.ID" value="Buy now" />
+            </form>
+            </td>
         </tr>
 }
     </tbody>
 </table>
+ 

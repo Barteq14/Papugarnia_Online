@@ -1,17 +1,18 @@
 ﻿@model IEnumerable<PapugarniaOnline.Models.Parrot>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Our Parrots";
 }
+<hr />
+<center><h1>Our Parrots</h1></center>
 
-<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
-        <tr>
+        <tr style="background-color:antiquewhite">
             <th>
                 @Html.DisplayNameFor(model => model.Quantity)
             </th>
