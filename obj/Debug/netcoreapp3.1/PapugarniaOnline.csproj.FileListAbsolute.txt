@@ -176,9 +176,6 @@ C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papug
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.csproj.CoreCompileInputs.cache
-C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\Parrots\Create.cshtml.g.cs
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\Parrots\Delete.cshtml.g.cs
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\Parrots\Details.cshtml.g.cs
@@ -199,3 +196,8 @@ C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papug
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\KindOfTickets\Details.cshtml.g.cs
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\KindOfTickets\Edit.cshtml.g.cs
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\KindOfTickets\Index.cshtml.g.cs
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\Order\BuyTicket.cshtml.g.cs
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\Order\Index.cshtml.g.cs
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.csproj.CoreCompileInputs.cache
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cache

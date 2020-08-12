@@ -19,5 +19,6 @@ namespace PapugarniaOnline.DAL
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<KindOfParrot> KindOfParrots { get; set; }
         public DbSet<KindOfTicket> KindOfTickets { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }

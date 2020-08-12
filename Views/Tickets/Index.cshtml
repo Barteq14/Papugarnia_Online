@@ -57,9 +57,9 @@
                 <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
             </td>
             <td>
-            <form asp-action="Create">
-                <input type="submit" class="btn btn-primary" asp-action="BuyTicket" asp-controller="TicketsController" asp-route-id="@item.ID" value="Buy now" />
-            </form>
+                <form>  
+                    <input type="submit" asp-action="BuyTicket" asp-controller="OrderController" asp-route-id="@item.ID" class="btn btn-primary" value="Buy now" />
+                </form>
             </td>
         </tr>
 }
