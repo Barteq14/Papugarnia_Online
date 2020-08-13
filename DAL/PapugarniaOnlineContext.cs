@@ -20,5 +20,15 @@ namespace PapugarniaOnline.DAL
         public DbSet<KindOfParrot> KindOfParrots { get; set; }
         public DbSet<KindOfTicket> KindOfTickets { get; set; }
         public DbSet<Order> Orders { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Parrot>().ToTable("Parrots");
+            modelBuilder.Entity<Ticket>().ToTable("Tickets");
+            modelBuilder.Entity<Profile>().ToTable("Profiles");
+            modelBuilder.Entity<KindOfParrot>().ToTable("KindOfParrots");
+            modelBuilder.Entity<KindOfTicket>().ToTable("KindOfTickets");
+            modelBuilder.Entity<Order>().ToTable("Orders");
+        }
     }
 }

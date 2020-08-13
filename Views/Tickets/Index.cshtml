@@ -4,7 +4,10 @@
     ViewData["Title"] = "Tickets";
 }
 <hr />
-<center><h1>Tickets</h1></center>
+<center>
+    <h1>Dostępne bilety. </h1>
+    <h3>Zapraszamy do kupna biletów online.</h3>
+</center>
 
 
 <p>
@@ -12,36 +15,24 @@
 </p>
 <table class="table">
     <thead>
-        <tr style="background-color:antiquewhite">
-            <th>
-                @Html.DisplayNameFor(model => model.TicketName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KindOfTicket)
-            </th>
-            <th></th>
-            <th>
-        </tr>
+        
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
                 <b>  @Html.DisplayFor(modelItem => item.TicketName) </b><br />
-                @if (item.TicketName == "Half price")
+                @if (item.TicketName == "Bilet Ulgowy")
                 {
-                    @Html.Label("children, students (up to 26 years of age), retirees, pensioners")
+                    @Html.Label("dzieci, studenci (do 26 roku życia), emeryci, renciści")
                 }
-                else if (item.TicketName == "Family")
+                else if (item.TicketName == "Bilet Rodzinny")
                 {
-                    @Html.Label("2 adult + 1 child; next child + 9 zł(to 3 more children)")
+                    @Html.Label("2 dorosłych + 1 dziecko; za każde kolejne dziecko + 9 zł")
                 }
-                else if (item.TicketName == "Group")
+                else if (item.TicketName == "Bilet Grupowy")
                 {
-                    @Html.Label("group from 15 persons")
+                    @Html.Label("grupy od 15 osób")
                 }
 
             </td>
