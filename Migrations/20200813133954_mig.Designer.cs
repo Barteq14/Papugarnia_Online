@@ -10,8 +10,8 @@ using PapugarniaOnline.DAL;
 namespace PapugarniaOnline.Migrations
 {
     [DbContext(typeof(PapugarniaOnlineContext))]
-    [Migration("20200812165551_mg")]
-    partial class mg
+    [Migration("20200813133954_mig")]
+    partial class mig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -64,6 +64,9 @@ namespace PapugarniaOnline.Migrations
 
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<string>("TicketName")
                         .IsRequired()

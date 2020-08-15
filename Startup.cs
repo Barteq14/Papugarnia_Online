@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PapugarniaOnline.DAL;
+using Microsoft.AspNetCore.Http;
 
 namespace PapugarniaOnline
 {
@@ -38,6 +39,8 @@ namespace PapugarniaOnline
             services.AddDbContext<PapugarniaOnlineContext>(options =>
                    options.UseSqlServer(
                        Configuration.GetConnectionString("PapugarniaConnection")));
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PapugarniaOnline.Migrations
 {
-    public partial class mg : Migration
+    public partial class mig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -41,7 +41,8 @@ namespace PapugarniaOnline.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DateTime = table.Column<DateTime>(nullable: false),
                     Username = table.Column<string>(maxLength: 55, nullable: false),
-                    TicketName = table.Column<string>(maxLength: 100, nullable: false)
+                    TicketName = table.Column<string>(maxLength: 100, nullable: false),
+                    Price = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {

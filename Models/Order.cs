@@ -20,6 +20,9 @@ namespace PapugarniaOnline.Models
         [Required]
         [MaxLength(100)]
         public string TicketName { get; set; }
+        [Required]
+        public double Price { get; set; }
+
 
     }
 }

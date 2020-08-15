@@ -63,6 +63,9 @@ namespace PapugarniaOnline.Migrations
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
                     b.Property<string>("TicketName")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")

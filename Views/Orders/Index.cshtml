@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PapugarniaOnline.Models.Ticket>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<hr />
+<center><h1> Twój Koszyk <img src="https://image.flaticon.com/icons/png/512/69/69986.png" width="200px" height="200px" /> </h1></center>
+<br />
+<br />
+
+
+@if (ViewBag.IsEmpty == "ok")
+{
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.TicketName)</th>
+                    <th>@Html.DisplayNameFor(model => model.Price)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.TicketName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                        <td>
+                            <form>
+                                <input type="submit" asp-action="DeleteTicket" asp-route-id="@item.ID" class="btn btn-danger" value="Usuń" />
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div class="alert-warning"><h1>Razem: Do zapłaty @ViewBag.ALLPRICE zł</h1><br /></div>
+    <center>
+        <a asp-action="Index" asp-controller="Tickets">Wróć do biletów</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a asp-action="BuyTicket">Dokonaj zakupu</a>
+    </center>
+}
+else
+{<hr />
+    <div class="alert-primary"><h2>@ViewBag.IsEmpty</h2></div>
+    
+    <hr />
+}
