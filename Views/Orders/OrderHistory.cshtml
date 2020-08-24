@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PapugarniaOnline.Models.Order>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<hr />
+<center><h1>Twoje zamówienia</h1></center>
+@if (ViewBag.Error == "ok")
+{
+
+    <table class="table">
+        <thead>
+            <tr style="background-color:antiquewhite">
+                <th>
+                    @Html.Label("Data zamówienia")
+                </th>
+                <th>
+                    @Html.Label("Nazwa użytkownika")
+                </th>
+                <th>
+                    @Html.Label("Bilet")
+                </th>
+                <th>
+                    @Html.Label("Cena")
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TicketName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <form>
+                            <input type="submit" asp-action="DeleteOrder" asp-route-id="@item.OrderID" class="btn btn-danger" value="Usuń" />
+                        </form>
+                        <a asp-action="ShowPDF" asp-controller="Orders" asp-route-id="@item.OrderID">Faktura</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <hr />
+    <div class="alert-primary"><h2>@ViewBag.Error</h2></div>
+
+    <hr />
+}

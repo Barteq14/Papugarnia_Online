@@ -22,6 +22,17 @@ namespace PapugarniaOnline.Models
         public string SurName { get; set; }
         [Required]
         [MaxLength(30)]
-        public string Address { get; set; }
+        public string City { get; set; }
+        [Required]
+        [MaxLength(30)]
+        public string ZipCode { get; set; }
+        [Required]
+        [MaxLength(30)]
+
+        public string Street { get; set; }
+        [Required]
+        [MaxLength(30)]
+        public string Number { get; set; }
+
     }
 }

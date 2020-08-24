@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PapugarniaOnline.DAL;
 using Microsoft.AspNetCore.Http;
+using Rotativa.AspNetCore;
 
 namespace PapugarniaOnline
 {
@@ -44,6 +45,7 @@ namespace PapugarniaOnline
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,7 +70,7 @@ namespace PapugarniaOnline
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+           
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -76,6 +78,8 @@ namespace PapugarniaOnline
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            RotativaConfiguration.Setup((Microsoft.AspNetCore.Hosting.IHostingEnvironment)env);
         }
     }
 }

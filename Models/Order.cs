@@ -12,8 +12,8 @@ namespace PapugarniaOnline.Models
         public int OrderID { get; set; }
         [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public DateTime DateTime { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yy H:mm:ss zzz}")]
+        public DateTime date { get; set; }
         [Required]
         [MaxLength(55)]
         public string Username { get; set; }

@@ -22,6 +22,12 @@
     <Compile Remove="Migrations\20200812155554_mig.Designer.cs" />
     <Compile Remove="Migrations\20200812165551_mg.cs" />
     <Compile Remove="Migrations\20200812165551_mg.Designer.cs" />
+    <Compile Remove="Migrations\20200813133954_mig.cs" />
+    <Compile Remove="Migrations\20200813133954_mig.Designer.cs" />
+    <Compile Remove="Migrations\20200823114242_mig.cs" />
+    <Compile Remove="Migrations\20200823114242_mig.Designer.cs" />
+    <Compile Remove="Migrations\20200823122428_mig.cs" />
+    <Compile Remove="Migrations\20200823122428_mig.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +43,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Rotativa" Version="1.7.3" />
+    <PackageReference Include="Rotativa.AspNetCore" Version="1.1.1" />
   </ItemGroup>
 
 </Project>

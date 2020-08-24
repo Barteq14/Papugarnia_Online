@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<hr />
+@if (ViewBag.Data == "ok")
+{
+    <center><h3>Wypełnij niezbędne informacje aby otrzymać Fakturę.</h3></center>
+    <form asp-action="ReadForm">
+        <div class="form-group">
+            <label class="control-label">Imię:</label>
+            <input name="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Nazwisko</label>
+            <input name="surname" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Kod pocztowy</label>
+            <input name="zipcode" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Miasto/Miejscowość</label>
+            <input name="city" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Ulica</label>
+            <input name="street" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Numer domu/mieszkania</label>
+            <input name="number" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Zapisz" class="btn btn-primary" />
+        </div>
+    </form>
+}
+else
+{
+
+    <div class="alert-primary"><h2>@ViewBag.Data</h2></div>
+    <form>
+        <div class="form-group">
+            <label class="control-label">Imię:</label>
+            <input name="name" value="@ViewBag.name" readonly class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Nazwisko</label>
+            <input name="surname" value="@ViewBag.surname" readonly class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Kod pocztowy</label>
+            <input name="zipcode" value="@ViewBag.zipcode" readonly  class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Miasto/Miejscowość</label>
+            <input name="city" value="@ViewBag.city" readonly class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Ulica</label>
+            <input name="street" value="@ViewBag.street" readonly class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Numer domu/mieszkania</label>
+            <input name="number" value="@ViewBag.number" readonly class="form-control" />
+        </div>
+    </form>
+    <hr />
+}
