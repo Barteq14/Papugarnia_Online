@@ -1,16 +1,59 @@
-﻿@*
+﻿@model IEnumerable<PapugarniaOnline.Models.Profile>
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
-tutaj bedzie fakturka
+<hr />
+<center><p><h1>Faktura nr @TempData["fn"] </h1></p></center>
+<br />
 
-@ViewBag.fname
-@ViewBag.fsurname
-@ViewBag.zipcode
-@ViewBag.city
-@ViewBag.street
-@ViewBag.number
-@ViewBag.tname
-@ViewBag.price
-@ViewBag.date
+<div style="float:right">
+    <h5> Miejsce i data wystawienia: @Html.Label("Warszawa,") @TempData["data"]</h5>
+</div>
+<br />
+<br />
+
+<div style="float:left">
+    <h4>@Html.Label("Sprzedający")</h4>
+    <br />
+    <p>@Html.Label("Papugarnia Yellowstone").</p>
+
+    <p>@Html.Label("00-200 Warszawa")</p>
+
+    <p>@Html.Label("Kwiaterska 46A")</p>
+    <br />
+</div>
+@foreach (var item in Model)
+{
+    <div style="float:right">
+        <h4>@Html.Label("Kupujący")</h4>
+        <br />
+        <p>@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.SurName)</p>
+
+        <p>@Html.DisplayFor(modelItem => item.ZipCode) @Html.DisplayFor(modelItem => item.City)</p>
+
+        <p>@Html.DisplayFor(modelItem => item.Street) @Html.DisplayFor(modelItem => item.Number)</p>
+        <br />
+    </div>
+}
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <td>@Html.Label("Nazwa biletu")</td>
+            <td>@Html.Label("Cena biletu")</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var std in ViewData["order"] as IList<Order>)
+        {
+            <tr>
+                <th>@std.TicketName</th>
+                <th>@std.Price zł</th>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<h3>@Html.Label("Razem do zapłaty: ") @ViewData["price"] zł</h3>

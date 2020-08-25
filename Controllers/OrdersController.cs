@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Razor.Language;
 using PapugarniaOnline.DAL;
 using PapugarniaOnline.Data;
 using PapugarniaOnline.Models;
@@ -21,6 +22,7 @@ namespace PapugarniaOnline.Controllers
         private readonly ApplicationDbContext _apcontext;
         public static List<Ticket> tickets = new List<Ticket>();
         public static double AllPrice;
+        public static double AllPrice2;
         public static string ticketname;
         public static List<string> user = new List<string>();
         public static List<Order> orders = new List<Order>();
@@ -120,6 +122,7 @@ namespace PapugarniaOnline.Controllers
             {
                 orders.Add(item);
             }
+
             if (orders.Count==0)
             {
                 ViewBag.Error = "Nie złożyłeś jeszcze żadnego zamówienia";
@@ -128,7 +131,6 @@ namespace PapugarniaOnline.Controllers
             else
             {
                 ViewBag.Error = "ok";
-                
             }
          
             return View(orders);
@@ -151,25 +153,39 @@ namespace PapugarniaOnline.Controllers
 
         public ActionResult ShowPDF(int id)
         {
-            List<Order> ff = new List<Order>();
-            var query = _context.Orders.Select(o => o).Where(o=>o.OrderID == id);
-            var query2 = _context.Profiles.Select(p => p).Where(p=>p.UserName == this.User.Identity.Name);
-            /*foreach(var item in query)
+            Random rnd = new Random();
+            int FactureNumber;
+            DateTime dt;
+
+            IList<Order> orders = new List<Order>();
+            List<Profile> profiles = new List<Profile>();
+
+            var getOrders = _context.Orders.Select(o => o).Where(o=>o.OrderID == id);
+            var getProfiles = _context.Profiles.Select(p => p).Where(p=>p.UserName == this.User.Identity.Name);
+
+            foreach(var item in getOrders)
             {
-                ff.Add(item);
-            }*/
+                orders.Add(item);
+            }      
 
-            ViewBag.fname = query2.Select(o => o.FirstName);
-            ViewBag.fsurname = query2.Select(o => o.SurName);
-            ViewBag.zipcode = query2.Select(o => o.ZipCode);
-            ViewBag.city = query2.Select(o => o.City);
-            ViewBag.street = query2.Select(o => o.Street);
-            ViewBag.number = query2.Select(o => o.Number);
-            ViewBag.tname = query.Select(o => o.TicketName);
-            ViewBag.price = query.Select(o => o.Price);
-            ViewBag.date = query.Select(o => o.date);
+            foreach (var itemm in getProfiles)
+            {
+                profiles.Add(itemm);
+            }
+            
+            foreach(var x in orders)
+            {
+                AllPrice2 += x.Price;
+            }
 
-            return new Rotativa.AspNetCore.ViewAsPdf("ShowPDF");
+            FactureNumber = rnd.Next(1, 99999999);
+            TempData["fn"] = FactureNumber;
+            dt = DateTime.Now;
+            TempData["data"] = dt;
+            ViewData["price"] = AllPrice2;
+            ViewData["order"] = orders;
+            AllPrice2 = 0.0;
+            return new Rotativa.AspNetCore.ViewAsPdf("ShowPDF",profiles,ViewData);
         }
     }
 }
