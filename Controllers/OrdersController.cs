@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -35,7 +36,7 @@ namespace PapugarniaOnline.Controllers
             _context = context;
             _apcontext = apcontext;
         }
-     
+        
         public IActionResult Index(int id)
         {
            
@@ -61,6 +62,7 @@ namespace PapugarniaOnline.Controllers
 
             return View(tickets);
         }
+        [Authorize]
         public IActionResult BuyTicket()
         {
             
@@ -94,7 +96,7 @@ namespace PapugarniaOnline.Controllers
             
             return View();
         }
-
+        [Authorize]
         public IActionResult DeleteTicket(int id)
         {
             foreach(var item in tickets.ToList())
@@ -106,7 +108,7 @@ namespace PapugarniaOnline.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize]
         public IActionResult OrderHistory()
         {
             orders.Clear();
@@ -135,7 +137,7 @@ namespace PapugarniaOnline.Controllers
          
             return View(orders);
         }
-
+        [Authorize]
         public IActionResult DeleteOrder(int id)
         {
             foreach (var item in orders.ToList())
@@ -150,7 +152,7 @@ namespace PapugarniaOnline.Controllers
             orders.Clear();
             return RedirectToAction(nameof(OrderHistory));
         }
-
+        [Authorize]
         public ActionResult ShowPDF(int id)
         {
             Random rnd = new Random();
@@ -185,7 +187,11 @@ namespace PapugarniaOnline.Controllers
             ViewData["price"] = AllPrice2;
             ViewData["order"] = orders;
             AllPrice2 = 0.0;
+
+            
             return new Rotativa.AspNetCore.ViewAsPdf("ShowPDF",profiles,ViewData);
+            orders.Clear();
+            profiles.Clear();
         }
     }
 }

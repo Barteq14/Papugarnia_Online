@@ -42,17 +42,20 @@
             <td>
                 @Html.DisplayFor(modelItem => item.KindOfTicket.Name)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-            <td>
-                <form>  
-                    <input type="submit" asp-action="Index" asp-controller="Orders" asp-route-id="@item.ID" class="btn btn-primary" value="Kup teraz" />
-                </form>
-            </td>
-        </tr>
+            @if (User.Identity.Name == "b.longota2@wp.pl")
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            }
+                <td>
+                    <form>
+                        <input type="submit" asp-action="Index" asp-controller="Orders" asp-route-id="@item.ID" class="btn btn-primary" value="Kup teraz" />
+                    </form>
+                </td>
+            </tr>
 }
     </tbody>
 </table>

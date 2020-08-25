@@ -93,3 +93,19 @@ body {
     height: 100%;
     background: url(../Image/kakadu.png);
 }
+
+#blok {
+    width: 500px;
+    height: 2.2em;
+    line-height: 2.2em;
+    margin: 0 auto;
+    border: 3px solid #DDD;
+    font-size: 1.5em;
+    background-color: #EEE;
+    overflow: hidden;
+}
+
+    #blok > p {
+        margin: 0;
+        white-space: nowrap;
+    }

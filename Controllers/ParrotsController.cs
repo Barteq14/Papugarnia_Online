@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -44,7 +45,7 @@ namespace PapugarniaOnline.Controllers
 
             return View(parrot);
         }
-
+        [Authorize]
         // GET: Parrots/Create
         public IActionResult Create()
         {
@@ -55,6 +56,7 @@ namespace PapugarniaOnline.Controllers
         // POST: Parrots/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,Quantity,TypeDescription,KindID")] Parrot parrot)
@@ -68,7 +70,7 @@ namespace PapugarniaOnline.Controllers
             ViewData["KindID"] = new SelectList(_context.KindOfParrots, "ID", "Name", parrot.KindID);
             return View(parrot);
         }
-
+        [Authorize]
         // GET: Parrots/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -89,6 +91,7 @@ namespace PapugarniaOnline.Controllers
         // POST: Parrots/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,Quantity,TypeDescription,KindID")] Parrot parrot)
@@ -121,7 +124,7 @@ namespace PapugarniaOnline.Controllers
             ViewData["KindID"] = new SelectList(_context.KindOfParrots, "ID", "Name", parrot.KindID);
             return View(parrot);
         }
-
+        [Authorize]
         // GET: Parrots/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -140,7 +143,7 @@ namespace PapugarniaOnline.Controllers
 
             return View(parrot);
         }
-
+        [Authorize]
         // POST: Parrots/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -151,16 +154,11 @@ namespace PapugarniaOnline.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize]
         private bool ParrotExists(int id)
         {
             return _context.Parrots.Any(e => e.ID == id);
         }
-
-        public IActionResult Gallery()
-        {
-
-            return View();
-        }
+   
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Web.WebPages;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PapugarniaOnline.DAL;
 using PapugarniaOnline.Data;
@@ -29,11 +30,12 @@ namespace PapugarniaOnline.Controllers
             _context = context;
             _apcontext = apcontext;
         }
+        [Authorize]
         public IActionResult Index()
         {
-          
 
-            var data = _context.Profiles.Select(p => p).Where(p => p.FirstName != null);
+            var data = _context.Profiles.Select(p => p).Where(p => p.UserName == this.User.Identity.Name);
+
             foreach (var item2 in data)
             {
                 name2 = item2.FirstName;
@@ -62,7 +64,7 @@ namespace PapugarniaOnline.Controllers
 
             return View();
         }
-
+        [Authorize]
         public IActionResult ReadForm(string name, string surname, string zipcode ,string city, string street, string number)
         {
             List<string> user = new List<string>();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +26,7 @@ namespace PapugarniaOnline.Controllers
             var papugarniaOnlineContext = _context.Tickets.Include(t => t.KindOfTicket);
             return View(await papugarniaOnlineContext.ToListAsync());
         }
-
+        [Authorize]
         // GET: Tickets/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -44,7 +45,7 @@ namespace PapugarniaOnline.Controllers
 
             return View(ticket);
         }
-
+        [Authorize]
         // GET: Tickets/Create
         public IActionResult Create()
         {
@@ -55,6 +56,7 @@ namespace PapugarniaOnline.Controllers
         // POST: Tickets/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,TicketName,Price,KindID")] Ticket ticket)
@@ -68,7 +70,7 @@ namespace PapugarniaOnline.Controllers
             ViewData["KindID"] = new SelectList(_context.KindOfTickets, "ID", "Name", ticket.KindID);
             return View(ticket);
         }
-
+        [Authorize]
         // GET: Tickets/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -89,6 +91,7 @@ namespace PapugarniaOnline.Controllers
         // POST: Tickets/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,TicketName,Price,KindID")] Ticket ticket)
@@ -121,7 +124,7 @@ namespace PapugarniaOnline.Controllers
             ViewData["KindID"] = new SelectList(_context.KindOfTickets, "ID", "Name", ticket.KindID);
             return View(ticket);
         }
-
+        [Authorize]
         // GET: Tickets/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -140,7 +143,7 @@ namespace PapugarniaOnline.Controllers
 
             return View(ticket);
         }
-
+        [Authorize]
         // POST: Tickets/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -151,7 +154,7 @@ namespace PapugarniaOnline.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize]
         private bool TicketExists(int id)
         {
             return _context.Tickets.Any(e => e.ID == id);
