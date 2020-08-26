@@ -218,3 +218,4 @@ C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papug
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\PapugarniaOnline.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\Orders\ShowPDF.cshtml.g.cs
+C:\Users\barteq\Desktop\magisterka\inne zadania\Wieksze Projekty\Projekt - Papugarnia_Online\Papugarnia_Online\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs

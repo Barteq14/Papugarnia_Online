@@ -72,8 +72,6 @@ namespace PapugarniaOnline.DAL
                 context.Tickets.Add(t);
             }
             context.SaveChanges();
-
-            //Trzeba załadować jakoś inicjalizer!
         }
     }
 

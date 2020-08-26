@@ -19,27 +19,35 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Parrots" asp-action="Index">Papugi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Tickets" asp-action="Index">Bilety</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">O nas</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Parrots" asp-action="Index">Papugi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Tickets" asp-action="Index">Bilety</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">O nas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Parrots" asp-action="Gallery">Galeria</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="OrderHistory">Zamówienia</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Profiles" asp-action="Index">Dane</a>
                             </li>
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                          
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Index"><img src="https://image.flaticon.com/icons/png/512/69/69986.png" width="30px" height="30px" /></a>
-                            </li>
+                        }
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Index"><img src="https://image.flaticon.com/icons/png/512/69/69986.png" width="30px" height="30px" /></a>
+                                </li>
+                            }
                         </ul>
                 </div>
             </div>
@@ -52,28 +60,27 @@
     <img class="nature2" width="100%" height="600px" src="https://images.alphacoders.com/449/thumb-1920-449417.jpg" />
     <img class="nature2" width="100%" height="600px" src="https://tapety.tja.pl/obrazki/tja_normalne/229918.jpg" />
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
 
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            <div id="blok">
-                <p>
-                    &copy; 2020 - PapugarniaOnline |
-                    00-200 Warszawa
-                    ul. Kwiaterska 46A |
-                    telefon: 111-222-333 |
-                    e-mail: papugarnia.Yellowstone@gmail.com |
-                    Dni wstępu: Poniedziałek - Niedziela 10.00 - 20.00
-                </p>
-            </div>
-        </div>
+        <center>
+            <p>
+                &copy; 2020 - PapugarniaOnline |
+                00-200 Warszawa
+                ul. Kwiaterska 46A |
+                telefon: 111-222-333 |
+                e-mail: papugarnia.Yellowstone@gmail.com |
+                Dni wstępu: Poniedziałek - Niedziela 10.00 - 20.00
+            </p>
+        </center>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

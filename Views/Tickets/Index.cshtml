@@ -9,54 +9,59 @@
     <h3>Zapraszamy do kupna biletów online.</h3>
 </center>
 
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                <b>  @Html.DisplayFor(modelItem => item.TicketName) </b><br />
-                @if (item.TicketName == "Bilet Ulgowy")
-                {
-                    @Html.Label("dzieci, studenci (do 26 roku życia), emeryci, renciści")
-                }
-                else if (item.TicketName == "Bilet Rodzinny")
-                {
-                    @Html.Label("2 dorosłych + 1 dziecko; za każde kolejne dziecko + 9 zł")
-                }
-                else if (item.TicketName == "Bilet Grupowy")
-                {
-                    @Html.Label("grupy od 15 osób")
-                }
-
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price) @Html.Label("zł")
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KindOfTicket.Name)
-            </td>
-            @if (User.Identity.Name == "b.longota2@wp.pl")
-            {
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            }
-                <td>
-                    <form>
-                        <input type="submit" asp-action="Index" asp-controller="Orders" asp-route-id="@item.ID" class="btn btn-primary" value="Kup teraz" />
-                    </form>
-                </td>
-            </tr>
+@if (User.Identity.Name == "b.longota2@wp.pl")
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
 }
-    </tbody>
-</table>
- 
+    <table class="table" style="background-color:burlywood">
+        <thead>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <b>  @Html.DisplayFor(modelItem => item.TicketName) </b><br />
+                        @if (item.TicketName == "Bilet Ulgowy")
+                        {
+                            @Html.Label("dzieci, studenci (do 26 roku życia), emeryci, renciści")
+                        }
+                        else if (item.TicketName == "Bilet Rodzinny")
+                        {
+                            @Html.Label("2 dorosłych + 1 dziecko; za każde kolejne dziecko + 9 zł")
+                        }
+                        else if (item.TicketName == "Bilet Grupowy")
+                        {
+                            @Html.Label("grupy od 15 osób")
+                        }
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price) @Html.Label("zł")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KindOfTicket.Name)
+                    </td>
+                    @if (User.Identity.Name == "b.longota2@wp.pl")
+                    {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                        </td>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <td>
+                            <form>
+                                <input type="submit" asp-action="Index" asp-controller="Orders" asp-route-id="@item.ID" class="btn btn-primary" value="Kup teraz" />
+                            </form>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>

@@ -159,6 +159,11 @@ namespace PapugarniaOnline.Controllers
         {
             return _context.Parrots.Any(e => e.ID == id);
         }
+
+        public IActionResult Gallery()
+        {
+            return View();
+        }
    
     }
 }
