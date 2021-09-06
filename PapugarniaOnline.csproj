@@ -31,7 +31,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\papuga.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Models\k4pvajuf.jox~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\papuga.png" />
   </ItemGroup>
 
   <ItemGroup>
